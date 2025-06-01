@@ -1,0 +1,15 @@
+https://pygame-zero.readthedocs.io/en/stable/
+
+inštalácia knižnice
+pip install pgzero
+
+Iné linky:
+https://electronstudio.github.io/pygame-zero-book/
+
+Pygame Zero
+https://github.com/lordmauve/pgzero
+
+https://www.geeksforgeeks.org/pygame-tutorial/
+
+https://www.geeksforgeeks.org/8-bit-game-using-pygame/
+
