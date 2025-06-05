@@ -1,4 +1,9 @@
-zoznam=("a", "b", "c", "d", "e", "f", "g", "h", "i", "j")
+zoznam=["a", "b", "c", "d", "e", "f", "g", "h", "i", "j"]
+print(zoznam)
+print(type(zoznam))
+zoznam.insert(0, "x")
+print(zoznam)
+
 def vypis(zoznam):
     for i in zoznam:
         print(i)
