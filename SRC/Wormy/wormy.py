@@ -8,7 +8,7 @@ import pygame
 import sys
 from pygame.locals import QUIT, KEYDOWN, KEYUP, K_ESCAPE, K_UP, K_DOWN, K_LEFT, K_RIGHT, K_a, K_d, K_w, K_s
 
-FPS = 5
+FPS = 10
 WINDOWWIDTH = 640
 WINDOWHEIGHT = 480
 CELLSIZE = 20
@@ -43,7 +43,7 @@ def main():
     BASICFONT = pygame.font.Font('freesansbold.ttf', 18)
     pygame.display.set_caption('Wormy')
 
-    showStartScreen()
+    # showStartScreen()
     while True:
         runGame()
         showGameOverScreen()
