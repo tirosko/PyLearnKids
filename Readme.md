@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Uložisko hier pre detí od 11 rokov
 
 Založené na knihe *Making Games with Python & Pygame* autor Al Sweigart  
