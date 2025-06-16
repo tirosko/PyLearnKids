@@ -226,5 +226,6 @@ def drawGrid():
         pygame.draw.line(DISPLAYSURF, DARKGRAY, (0, y), (WINDOWWIDTH, y))
 
 
+# Spustenie programu
 if __name__ == '__main__':
     main()
