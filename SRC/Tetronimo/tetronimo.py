@@ -173,12 +173,11 @@ def main():
     showTextScreen('Tetromino')
     while True:  # game loop
         if random.randint(0, 1) == 0:
-            music_file = os.path.join(
-                os.getcwd(), 'SRC', 'Tetronimo', 'tetrisb.mid')
+            music_file = os.path.join(os.path.dirname(__file__), 'tetrisb.mid')
             pygame.mixer.music.load(music_file)
         else:
             music_file = os.path.join(
-                os.getcwd(), 'SRC', 'Tetronimo',  'tetrisc.mid')
+                os.path.dirname(__file__),  'tetrisc.mid')
             pygame.mixer.music.load(music_file)
         pygame.mixer.music.play(-1, 0.0)
         runGame()
