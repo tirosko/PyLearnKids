@@ -7,7 +7,7 @@
 # Your Own Computer Games with Python", chapter 15:
 #   http://inventwithpython.com/chapter15.html
 
-# This program is free software: you can redistribute it and/or modify
+# This program is free software: you can redistribute it and/or modify☺
 
 import random
 import sys
