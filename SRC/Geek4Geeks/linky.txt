@@ -1,0 +1,9 @@
+hlavný zdroj: https://www.geeksforgeeks.org/python/pygame-tutorial/
+
+https://www.geeksforgeeks.org/python/how-to-change-screen-background-color-in-pygame/
+
+pokračovanie vysvetľovania:
+https://www.geeksforgeeks.org/python/pygame-drawing-objects-and-shapes/
+
+komplexnejšia téma - udalosti:
+https://www.geeksforgeeks.org/python/pygame-event-handling/
