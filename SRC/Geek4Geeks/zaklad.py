@@ -10,7 +10,9 @@ screen = pygame.display.set_mode((screen_width, screen_height))
 pygame.display.set_caption("My First Pygame")
 
 # Define colors (RGB)
-WHITE = (155, 155, 155)
+# Vysvetlenie ako sú definované farby podľa RGB štandardu R-Red, G-Green, B-Blue - 255 je najvyššia hodnota (255,0,0) - je červená
+WHITE = (255, 255, 255)
+RED = (255, 0, 0,)
 BLACK = (0, 0, 0)
 
 # Set up the game clock
@@ -25,7 +27,7 @@ while True:
             sys.exit()
 
     # Fill the screen with white color
-    screen.fill(WHITE)
+    screen.fill(RED)
 
     # Update the display
     pygame.display.flip()
