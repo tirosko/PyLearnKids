@@ -15,7 +15,7 @@ window.fill((255, 255, 255))
 
 # Using draw.rect module of
 # pygame to draw the outlined rectangle
-sirka = 0
+sirka = 2
 # ak sirka je nula tak je obdlznik vyplneny
 pygame.draw.rect(window, (0, 0, 255),
                  [100, 100, 400, 100], sirka)
