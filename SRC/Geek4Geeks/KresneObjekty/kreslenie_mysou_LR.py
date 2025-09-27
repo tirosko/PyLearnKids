@@ -13,7 +13,7 @@ window = pygame.display.set_mode((600, 600))
 window.fill((255, 255, 255))
 
 
-# List to store (position, color) tuples for each circle
+# List to store (position, color, solid) for each circle
 circle_data = []
 
 # radius of the circle
@@ -55,14 +55,24 @@ while run:
         # then storing the current position and assigning a color
         elif event.type == pygame.MOUSEBUTTONDOWN:
             position = event.pos
-            # Assign next color from the list
             circle_color = colors[color_index % len(colors)]
-            circle_data.append((position, circle_color))
+            # Left button: solid, Right button: not solid
+            if event.button == 1:
+                solid = True
+            elif event.button == 3:
+                solid = False
+            else:
+                continue  # Ignore other buttons
+            circle_data.append((position, circle_color, solid))
             color_index += 1
 
-    # Draw each circle with its assigned color
-    for position, circle_color in circle_data:
-        pygame.draw.circle(window, circle_color, position, circle_radius)
+    # Draw each circle with its assigned color and fill style
+    for position, circle_color, solid in circle_data:
+        if solid:
+            pygame.draw.circle(window, circle_color, position, circle_radius)
+        else:
+            pygame.draw.circle(window, circle_color, position,
+                               circle_radius, 3)  # width=3 for outline
 
     # Draws the surface object to the screen.
     pygame.display.update()
