@@ -1,10 +1,15 @@
 # importing all the required libraries
 import pygame
 from sys import exit
+import os
 
 # initiating pygame library to use it's
 # functions
 pygame.init()
+
+# Get the directory where the script is located
+script_dir = os.path.dirname(os.path.abspath(__file__))
+
 
 # declaring windows/surface width and height
 size = width, height = 740, 480
@@ -12,7 +17,12 @@ screen = pygame.display.set_mode(size)
 
 # loads a new image from a file and convert()
 # will create a copy of image on surface
-img = pygame.image.load("char.png").convert()
+image_folder = os.path.join(script_dir, 'images')
+# Load an image from that folder
+image_path = os.path.join(image_folder, 'char1.png')
+player_image = pygame.image.load(image_path)
+img = player_image
+img = img.convert()
 
 # declaring value to variables
 x, y = 0, 0
@@ -49,14 +59,27 @@ while True:
 
             # declaring new image file to update image
             # everytime left CTRL is pressed
-            img = pygame.image.load("char1.png")
+            # img = pygame.image.load("char1.png")
+            image_folder = os.path.join(script_dir, 'images')
+
+            # Load an image from that folder
+            image_path = os.path.join(image_folder, 'char1.png')
+            player_image = pygame.image.load(image_path)
+            img = player_image
             pygame.display.update()  # update image
         elif event.key == pygame.K_BACKSPACE:
 
             # this the default file we declared in start
             # and it will restore it everytime we press
             # backspace
-            img = pygame.image.load("char.png")
+            # img = pygame.image.load("char.png")
+            # Construct path to your asset folder (e.g., 'images')
+            image_folder = os.path.join(script_dir, 'images')
+
+            # Load an image from that folder
+            image_path = os.path.join(image_folder, 'char.png')
+            player_image = pygame.image.load(image_path)
+            img = player_image
             pygame.display.update()  # update image
 
      # it will get triggered when left key is released
