@@ -64,6 +64,7 @@ while run:
             else:
                 continue  # Ignore other buttons
             circle_data.append((position, circle_color, solid))
+            print(circle_data)
             color_index += 1
 
     # Draw each circle with its assigned color and fill style
