@@ -4,7 +4,9 @@ def gfg(x,li=[]):
 		li.append(i*i) 
 	print(li) 
 
-gfg(3,[3,2,1]) 
+gfg(3)
+gfg(3,[3,2,1])
+
 
 
 
