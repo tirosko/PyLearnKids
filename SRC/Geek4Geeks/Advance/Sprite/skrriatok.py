@@ -1,5 +1,5 @@
 import pygame
-import random
+# import random
 
 # GLOBAL VARIABLES
 COLOR = (255, 100, 98)
