@@ -5,18 +5,19 @@ import random
 
 # instantiating the class
 pygame.init()
- 
+
 # dimension of the screen
 width = 700
 height = 550
- 
+
 # colours
 white = (255, 255, 255)
 red = (255, 0, 0)
 green = (0, 255, 0)
 blue = (0, 0, 255)
 black = (0, 0, 0)
- 
+clk = pygame.time.Clock()  # clock
+
 # creating a Screen
 screen = pygame.display.set_mode((width, height))
 
@@ -28,7 +29,7 @@ pygame.display.set_caption("Bouncy Ball")
 # declaring variables for the ball
 ball_X = width/2 - 12
 ball_Y = height/2 - 12
-ball_XChange = 3* random.choice((1, -1))
+ball_XChange = 3 * random.choice((1, -1))
 ball_YChange = 3
 ballPixel = 24
 
@@ -62,7 +63,8 @@ while running:
 # inside the gaming Loop
 
     # drawing the ball
-    ballImg = pygame.draw.circle(screen, (0,0,255),
+    ballImg = pygame.draw.circle(screen, (0, 0, 255),
                                  (int(ball_X), int(ball_Y)),
                                  15)
-    pygame.display.update()    
+    clk.tick(60)
+    pygame.display.update()
