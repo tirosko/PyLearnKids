@@ -27,15 +27,29 @@ class Sprite(pygame.sprite.Sprite):
 
     def moveRight(self, pixels):
         self.rect.x += pixels
+        # keep inside right boundary
+        if self.rect.x > WIDTH - self.rect.width:
+            self.rect.x = WIDTH - self.rect.width
 
     def moveLeft(self, pixels):
         self.rect.x -= pixels
+        # keep inside left boundary
+        if self.rect.x < 0:
+            self.rect.x = 0
 
-    def moveForward(self, speed):
-        self.rect.y += speed * speed/10
+    def moveForward(self, pixels):
+        # moving downwards by fixed pixels
+        self.rect.y += int(pixels)
+        # keep inside bottom boundary
+        if self.rect.y > HEIGHT - self.rect.height:
+            self.rect.y = HEIGHT - self.rect.height
 
-    def moveBack(self, speed):
-        self.rect.y -= speed * speed/10
+    def moveBack(self, pixels):
+        # moving upwards by fixed pixels
+        self.rect.y -= int(pixels)
+        # keep inside top boundary
+        if self.rect.y < 0:
+            self.rect.y = 0
 
 
 pygame.init()
@@ -54,6 +68,7 @@ all_sprites_list = pygame.sprite.Group()
 playerCar = Sprite(RED, 20, 30)
 playerCar.rect.x = 200
 playerCar.rect.y = 300
+step = 2
 
 
 all_sprites_list.add(playerCar)
@@ -71,13 +86,13 @@ while exit:
 
     keys = pygame.key.get_pressed()
     if keys[pygame.K_LEFT]:
-        playerCar.moveLeft(10)
+        playerCar.moveLeft(step)
     if keys[pygame.K_RIGHT]:
-        playerCar.moveRight(10)
+        playerCar.moveRight(step)
     if keys[pygame.K_DOWN]:
-        playerCar.moveForward(10)
+        playerCar.moveForward(step)
     if keys[pygame.K_UP]:
-        playerCar.moveBack(10)
+        playerCar.moveBack(step)
 
     all_sprites_list.update()
     screen.fill(SURFACE_COLOR)
