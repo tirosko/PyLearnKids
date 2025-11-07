@@ -1,5 +1,6 @@
 # import random
 import pygame
+# https://www.geeksforgeeks.org/python/pygame-tutorial/
 # https://www.geeksforgeeks.org/python/pygame-control-sprites/
 
 # Global Variables
@@ -17,7 +18,10 @@ class Sprite(pygame.sprite.Sprite):
 
         self.image = pygame.Surface([width, height])
         self.image.fill(SURFACE_COLOR)
-        self.image.set_colorkey(COLOR)
+# The use of set_colorkey(COLOR) may be unnecessary since the sprite is filled with SURFACE_COLOR and then drawn over with color. If transparency is not needed, consider removing it for clarity.
+# Použitie funkcie set_colorkey(COLOR) môže byť zbytočné, pretože sprite je vyplnený funkciou SURFACE_COLOR a
+# potom prekreslený farbou. Ak priehľadnosť nie je potrebná, zvážte jej odstránenie kvôli prehľadnosti.
+#       self.image.set_colorkey(COLOR)
 
         pygame.draw.rect(self.image,
                          color,
