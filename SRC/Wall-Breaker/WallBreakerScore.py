@@ -1,6 +1,8 @@
 import pygame
 # import random
 import sys
+import os
+
 # Sound
 # https://pixabay.com/sound-effects/search/wav/
 
@@ -8,20 +10,25 @@ import sys
 pygame.init()
 pygame.mixer.init()
 
-# 🖥️ Screen setup
+# Screen setup
 WIDTH, HEIGHT = 800, 600
 screen = pygame.display.set_mode((WIDTH, HEIGHT))
 pygame.display.set_caption("Break the Wall")
 
-# 🎨 Colors
+# Colors
 WHITE = (255, 255, 255)
 RED = (255, 0, 0)
 BLUE = (0, 0, 255)
 BLACK = (0, 0, 0)
 
-# 🔊 Load sounds
-# bounce_sound = pygame.mixer.Sound("bounce.wav")
-# brick_sound = pygame.mixer.Sound("brick.wav")
+# Get script directory
+script_dir = os.path.dirname(os.path.abspath(__file__))
+sound_folder = os.path.join(script_dir, 'Sounds')
+
+# Load sounds
+sound_path2 = os.path.join(sound_folder, 'ballhit.mp3')
+# bounce_sound = pygame.mixer.Sound(sound_path)
+brick_sound = pygame.mixer.Sound(sound_path2)
 # lose_life_sound = pygame.mixer.Sound("lose_life.wav")
 
 # 🕹️ Paddle
@@ -89,7 +96,7 @@ while running:
         del bricks[hit_index]
         ball_speed[1] *= -1
         score += 10
-        # brick_sound.play()
+        brick_sound.play()
 
     # 💔 Missed ball
     if ball.bottom >= HEIGHT:
