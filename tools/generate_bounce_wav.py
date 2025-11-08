@@ -21,11 +21,14 @@ end_freq = 550.0
 num_samples = int(SAMPLE_RATE * DURATION)
 
 # Envelope: quick attack, exponential decay
+
+
 def envelope(t):
     # t in [0,1]
     if t < 0.02:
         return t / 0.02  # linear attack 20 ms
     return math.exp(-6.0 * (t - 0.02))  # decay
+
 
 frames = []
 for n in range(num_samples):
@@ -35,7 +38,8 @@ for n in range(num_samples):
     phase = 2.0 * math.pi * freq * (n / SAMPLE_RATE)
     amp = envelope(n / num_samples)
     # Add a tiny amount of high-frequency "click" by mixing a short noise burst
-    noise = (0.6 * (2.0 * (math.sin(8000.0 * (n / SAMPLE_RATE))))) if n < 200 else 0.0
+    noise = (0.6 * (2.0 * (math.sin(8000.0 * (n / SAMPLE_RATE))))
+             ) if n < 200 else 0.0
     sample = 0.7 * amp * math.sin(phase) + 0.03 * noise
     # clamp
     if sample > 1.0:
