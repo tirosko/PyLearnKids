@@ -6,7 +6,7 @@
 import random
 import pygame
 import sys
-from pygame.locals import QUIT, KEYUP, K_ESCAPE, MOUSEMOTION, MOUSEBUTTONUP
+from pygame.locals import *
 
 FPS = 30  # frames per second, the general speed of the program
 WINDOWWIDTH = 640  # size of window's width in pixels
@@ -84,14 +84,14 @@ def main():
                 mouseClicked = True
 
         boxx, boxy = getBoxAtPixel(mousex, mousey)
-        if boxx is not None and boxy is not None:
+        if boxx != None and boxy != None:
             # The mouse is currently over a box.
             if not revealedBoxes[boxx][boxy]:
                 drawHighlightBox(boxx, boxy)
             if not revealedBoxes[boxx][boxy] and mouseClicked:
                 revealBoxesAnimation(mainBoard, [(boxx, boxy)])
                 revealedBoxes[boxx][boxy] = True  # set the box as "revealed"
-                if firstSelection is None:  # the current box was the first box clicked
+                if firstSelection == None:  # the current box was the first box clicked
                     firstSelection = (boxx, boxy)
                 else:  # the current box was the second box clicked
                     # Check if there is a match between the two icons.
