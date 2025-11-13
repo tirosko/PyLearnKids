@@ -1,7 +1,6 @@
 # Importing the pygame module
 import pygame
 from pygame.locals import *
-# https://www.geeksforgeeks.org/python/adding-collisions-using-pygame-rect-colliderect-in-pygame/
 
 # Initiate pygame and give permission
 # to use pygame's functionality
