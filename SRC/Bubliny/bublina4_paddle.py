@@ -26,8 +26,8 @@ font = pygame.font.Font('freesansbold.ttf', 36)
 bubbles = []
 
 # Paddle properties
-PADDLE_WIDTH = 20
-PADDLE_HEIGHT = 100
+PADDLE_WIDTH = 5
+PADDLE_HEIGHT = 20
 paddle = Rect(WIDTH // 2 - PADDLE_WIDTH // 2, HEIGHT // 2 -
               PADDLE_HEIGHT // 2, PADDLE_WIDTH, PADDLE_HEIGHT)
 paddle_speed = 6
