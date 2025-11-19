@@ -19,7 +19,7 @@ clock = pygame.time.Clock()
 
 
 # Creating a new rect for first object
-BUBLE_PRIEMER = random.randint(5, 50)
+BUBLE_PRIEMER = random.randint(15, 50)
 buble_rect = Rect(0, random.randint(0, HEIGHT-BUBLE_PRIEMER),
                   BUBLE_PRIEMER, BUBLE_PRIEMER)
 print("Bublina priemer:", BUBLE_PRIEMER)
@@ -72,7 +72,8 @@ while run:
     #     speed_b *= -1
 
     # Drawing player rect
-    pygame.draw.ellipse(window, (0,   255,   0), buble_rect, 1)
+    #
+    pygame.draw.ellipse(window, (255,   0,   0), buble_rect, 0)
     # Drawing player rect2
     # pygame.draw.rect(window, (0,   0,   255),
     #                  player_rect2)
