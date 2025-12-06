@@ -7,3 +7,17 @@ https://www.geeksforgeeks.org/python/pygame-drawing-objects-and-shapes/
 
 komplexnejšia téma - udalosti:
 https://www.geeksforgeeks.org/python/pygame-event-handling/
+
+Videa na tému Pygame:
+https://www.youtube.com/watch?v=wRiCKCdnLHY&list=PLCC34OHNcOtpOG96Uwh3VGkmpZ7qTB5dx&index=1
+Collisions in Pygame - Beginner Tutorial
+https://www.youtube.com/watch?v=BHr9jxKithk
+Príklady:
+http://www.codingwithruss.com/pygame/top-3-collision-types-in-pygame/
+Chytanie objektov:
+http://www.codingwithruss.com/pygame/how-to-click-and-drag-objects-in-pygame/
+
+The ultimate introduction to Pygame
+https://www.youtube.com/watch?v=AY9MnQ4x3zk
+
+https://github.com/tlcDataScience/pygame-learning
