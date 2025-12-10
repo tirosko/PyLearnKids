@@ -21,3 +21,9 @@ The ultimate introduction to Pygame
 https://www.youtube.com/watch?v=AY9MnQ4x3zk
 
 https://github.com/tlcDataScience/pygame-learning
+
+Podklady z knihy:
+https://github.com/Smaug175/Pygame_learning/tree/master
+
+Školiace príklady:
+https://github.com/tlcDataScience/pygame-learning/tree/main
