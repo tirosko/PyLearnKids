@@ -8,7 +8,7 @@ import pygame
 import sys
 from pygame.locals import QUIT, KEYDOWN, KEYUP, K_ESCAPE, K_UP, K_DOWN, K_LEFT, K_RIGHT, K_a, K_d, K_w, K_s
 
-FPS = 10
+FPS = 5
 WINDOWWIDTH = 640
 WINDOWHEIGHT = 480
 CELLSIZE = 20
