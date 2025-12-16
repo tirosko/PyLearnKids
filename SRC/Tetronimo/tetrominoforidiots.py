@@ -84,6 +84,8 @@ def main():
         pygame.mixer.music.stop()
         showTextScreen('Game Over')
 
+# -- runGame() --
+
 
 def runGame():
     # setup variables for the start of the game
