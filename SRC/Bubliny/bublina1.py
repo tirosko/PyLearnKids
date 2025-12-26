@@ -1,6 +1,5 @@
 # Importing the pygame module
 import pygame
-from pygame.locals import *
 import random
 
 # Initiate pygame and give permission
@@ -20,7 +19,7 @@ clock = pygame.time.Clock()
 
 # Creating a new rect for first object
 BUBLE_PRIEMER = random.randint(15, 50)
-buble_rect = Rect(0, random.randint(0, HEIGHT-BUBLE_PRIEMER),
+buble_rect = pygame.Rect(0, random.randint(0, HEIGHT-BUBLE_PRIEMER),
                   BUBLE_PRIEMER, BUBLE_PRIEMER)
 print("Bublina priemer:", BUBLE_PRIEMER)
 
